@@ -1,0 +1,13 @@
+ghost:
+  image: gold/ghost:0.7.5
+  command: npm start --production
+  restart: always
+  ports:
+   - "3003:2368"
+  volumes:
+   - /var/www/99999101AC/ghost/:/var/lib/ghost
+  environment:
+   - GHOST_URL=http://dockercluster.tk
+   - PROD_FORCE_ADMIN_SSL=true
+   - MAIL_FROM='"PublioDigital" <postmaster@publiodigital.com>'
+   - MAIL_HOST=mail.example.com
